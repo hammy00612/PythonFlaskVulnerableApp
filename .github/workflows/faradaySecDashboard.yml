@@ -11,26 +11,26 @@ jobs:
     runs-on: ubuntu-latest
     #continue-on-error: true
     steps:
-      - uses: actions/checkout@v1
-      - name: Install tfSec
-        run: |
+    - uses: actions/checkout@v1
+    - name: Install tfSec
+      run: |
 #          brew install tfsec
-            RUN wget -q -O tfsec https://github.com/aquasecurity/tfsec/releases/download/${TFSEC_VERSION}/tfsec-linux-amd64
-            chmod +x ./tfsec 
-            mv ./tfsec /usr/local/bin/tfsec
+          RUN wget -q -O tfsec https://github.com/aquasecurity/tfsec/releases/download/${TFSEC_VERSION}/tfsec-linux-amd64
+          chmod +x ./tfsec 
+          mv ./tfsec /usr/local/bin/tfsec
 
-      - name: Run TFSec
-        run: tfsec . --format junit --out tfsec-junit.xml || true
+    - name: Run TFSec
+      run: tfsec . --format junit --out tfsec-junit.xml || true
 
 
 #  tfsec terraform/aws --format junit --out tfsec-junit.xml
 #  https://about.gitlab.com/blog/2022/02/17/fantastic-infrastructure-as-code-security-attacks-and-how-to-find-them/
 
-      - name: Upload TFSec Report
-        uses: actions/upload-artifact@v2
-        with:
-          name: tfsec-report
-          path: tfsec-junit.xml
+    - name: Upload TFSec Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: tfsec-report
+        path: tfsec-junit.xml
 
 ### Upload phase:
   upload:
