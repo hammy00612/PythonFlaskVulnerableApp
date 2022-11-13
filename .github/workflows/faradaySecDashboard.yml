@@ -5,16 +5,12 @@ on:
       - master
 
 jobs:
-### SCAN phase:
-#  build:
   scan:
     runs-on: ubuntu-latest
-    #continue-on-error: true
     steps:
     - uses: actions/checkout@v1
     - name: Install tfSec
       run: |
-#          brew install tfsec
         RUN wget -q -O tfsec https://github.com/aquasecurity/tfsec/releases/download/${TFSEC_VERSION}/tfsec-linux-amd64
         chmod +x ./tfsec 
         mv ./tfsec /usr/local/bin/tfsec
