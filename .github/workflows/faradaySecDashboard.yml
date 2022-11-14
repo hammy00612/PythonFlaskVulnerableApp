@@ -16,7 +16,11 @@ jobs:
         mv ./tfsec /usr/local/bin/tfsec
     - name: Run TFSec
       run: tfsec . --format junit --out tfsec-junit.xml || true
-
+    - name: CheckOutput
+      run: |
+        ls ./
+        pwd
+        ls -l
 
 #  tfsec terraform/aws --format junit --out tfsec-junit.xml
 #  https://about.gitlab.com/blog/2022/02/17/fantastic-infrastructure-as-code-security-attacks-and-how-to-find-them/
