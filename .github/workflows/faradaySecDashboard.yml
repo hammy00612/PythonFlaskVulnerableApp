@@ -95,6 +95,8 @@ jobs:
 
         echo "_____________________________"
         ls terrascan-results.xml
+        ls -l
+        cat terrascan-results.xml/terrascan-results.xml
 
 ###    Faraday CLI approach
     - name: Upload Reports to Faraday
