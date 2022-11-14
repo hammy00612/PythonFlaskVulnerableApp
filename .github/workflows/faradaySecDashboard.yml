@@ -55,7 +55,7 @@ jobs:
     - name: Upload TerraScan Report
       uses: actions/upload-artifact@v2
       with:
-        name: terrascan-results
+        name: terrascan-report
         path: faraday_terrascan.xml
 
 ### Upload phase:
@@ -76,13 +76,13 @@ jobs:
       uses: actions/download-artifact@master
       with:
         name: tfsec-report
-        path: tfsec-junit.xml
+        path: tfsec-report
 
     - name: Download TerraScan Report Artifact
       uses: actions/download-artifact@master
       with:
-        name: terrascan-results
-        path: terrascan-results
+        name: terrascan-report
+        path: terrascan-report
 
 
     - name: CheckOutput
@@ -100,8 +100,8 @@ jobs:
       run: |
         pip install faraday-cli
         faraday-cli auth -f ${{ secrets.FARADAY_HOST }} -u ${{ secrets.FARADAY_USERNAME }} -p ${{ secrets.FARADAY_PASSWORD }}
-        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} tfsec-junit.xml/faraday_tfsec.xml
-        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} /reports/terrascan-results/faraday_terrascan.xml
+        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} /reports/tfsec-report/faraday_tfsec.xml
+        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} /reports/terrascan-report/faraday_terrascan.xml
 
 
 
