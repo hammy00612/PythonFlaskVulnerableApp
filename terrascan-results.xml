@@ -1,0 +1,78 @@
+<results>
+  <scan_errors>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/dbs</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/dbs&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/setup</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/setup&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/setup/db</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/setup/db&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/setup/execution</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/setup/execution&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/setup/file</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/setup/file&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static/css</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static/css&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static/fonts</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static/fonts&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static/js</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static/js&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static/uploads</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static/uploads&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static/uploads/subfolder</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/static/uploads/subfolder&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates/execution</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates/execution&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates/files</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates/files&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates/fuzzing</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates/fuzzing&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates/sqli</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates/sqli&#39; has no terraform config files</errMsg>
+    </scan_error>
+    <scan_error iac_type="terraform">
+      <directory>/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates/xss</directory>
+      <errMsg>directory &#39;/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp/templates/xss&#39; has no terraform config files</errMsg>
+    </scan_error>
+  </scan_errors>
+  <passed_rules></passed_rules>
+  <violations>
+    <violation rule_name="vpcFlowLogsNotEnabled" description="Ensure VPC flow logging is enabled in all VPCs" rule_id="AC_AWS_0369" severity="LOW" category="Logging and Monitoring" resource_name="My_VPC" resource_type="aws_vpc" module_name="root" file="main.tf" plan_root="./" line="9"></violation>
+  </violations>
+  <skipped_violations></skipped_violations>
+  <scan_summary file_folder="/Users/hmz/Desktop/code_files/test_dashboard_cicd/faraday/PythonFlaskVulnerableApp" iac_type="terraform" scanned_at="2022-11-14 01:53:32.927589 +0000 UTC" policies_validated="139" violated_policies="1" low="1" medium="0" high="0"></scan_summary>
+</results>
