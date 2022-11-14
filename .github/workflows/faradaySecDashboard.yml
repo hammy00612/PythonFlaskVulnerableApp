@@ -45,7 +45,7 @@ jobs:
 
        
     - name: Run TerraScan
-      run: terrascan scan -t aws -d . --output xml -i terraform > ./terrascan-results.xml || true
+      run: terrascan scan -t aws -d . --output xml -i terraform > ./terrascan_results.xml || true
     - name: CheckOutput
       run: |
         ls ./
@@ -56,7 +56,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: terrascan-results
-        path: terrascan-results.xml
+        path: terrascan_results.xml
 
 ### Upload phase:
   upload:
@@ -104,7 +104,7 @@ jobs:
         pip install faraday-cli
         faraday-cli auth -f ${{ secrets.FARADAY_HOST }} -u ${{ secrets.FARADAY_USERNAME }} -p ${{ secrets.FARADAY_PASSWORD }}
         faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} tfsec-junit.xml/tfsec-junit.xml
-        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} /reports/terrascan-results/terrascan-results.xml
-
+        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} /reports/terrascan-results/terrascan_results.xml
+        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} /reports/terrascan-results/terrascan-results
 
 
