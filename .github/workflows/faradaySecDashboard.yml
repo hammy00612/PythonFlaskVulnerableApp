@@ -62,8 +62,8 @@ jobs:
       run: |
         pip install faraday-cli
         faraday-cli auth -f ${{ secrets.FARADAY_HOST }} -u ${{ secrets.FARADAY_USERNAME }} -p ${{ secrets.FARADAY_PASSWORD }}
-        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} /__w/PythonFlaskVulnerableApp/PythonFlaskVulnerableApp/tfsec-junit.xml
-#        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} --tag-vuln ${{ github.event.repository.name }} tfsec-junit.xml
+        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} ./tfsec-junit.xml
+
 
 
 
