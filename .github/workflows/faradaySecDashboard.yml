@@ -14,7 +14,6 @@ jobs:
         RUN wget -q -O tfsec https://github.com/aquasecurity/tfsec/releases/download/${TFSEC_VERSION}/tfsec-linux-amd64
         chmod +x ./tfsec 
         mv ./tfsec /usr/local/bin/tfsec
-
     - name: Run TFSec
       run: tfsec . --format junit --out tfsec-junit.xml || true
 
