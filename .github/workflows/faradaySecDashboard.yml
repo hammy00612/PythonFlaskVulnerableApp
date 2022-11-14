@@ -104,7 +104,7 @@ jobs:
         pip install faraday-cli
         faraday-cli auth -f ${{ secrets.FARADAY_HOST }} -u ${{ secrets.FARADAY_USERNAME }} -p ${{ secrets.FARADAY_PASSWORD }}
         faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} tfsec-junit.xml/tfsec-junit.xml
-        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} terrascan-results.xml
+        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} terrascan-results.xml/terrascan-results.xml
 
 
 
