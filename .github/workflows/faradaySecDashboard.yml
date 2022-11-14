@@ -87,14 +87,7 @@ jobs:
 
     - name: CheckOutput
       run: |
-        ls ./tfsec-junit.xml
-        pwd
-        ls -l
-        echo "____________________________________"
-        cat tfsec-junit.xml/tfsec-junit.xml
-
         echo "_____________________________"
-
         ls -l
         ls /reports/terrascan-results/
 
