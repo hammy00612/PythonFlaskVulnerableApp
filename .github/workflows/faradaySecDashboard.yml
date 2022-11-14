@@ -89,6 +89,10 @@ jobs:
       run: |
         echo "_____________________________"
         ls -l
+        echo "ls /reports/"
+        ls /reports/
+        echo "____________________________________________________"
+        echo "ls /reports/terrascan-results/"
         ls /reports/terrascan-results/
 
 ###    Faraday CLI approach
