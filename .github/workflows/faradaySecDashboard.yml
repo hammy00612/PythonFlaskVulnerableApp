@@ -51,6 +51,12 @@ jobs:
         name: tfsec-report
         path: tfsec-junit.xml
 
+    - name: CheckOutput
+      run: |
+        ls ./
+        pwd
+        ls -l
+
 ###    Faraday CLI approach
     - name: Upload Reports to Faraday
       run: |
