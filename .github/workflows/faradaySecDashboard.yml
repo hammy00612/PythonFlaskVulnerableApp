@@ -94,7 +94,7 @@ jobs:
         cat tfsec-junit.xml/tfsec-junit.xml
 
         echo "_____________________________"
-        ls terrascan-results.xml
+
         ls -l
         ls /reports/terrascan-results/
 
