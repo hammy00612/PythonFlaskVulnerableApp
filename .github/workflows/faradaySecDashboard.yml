@@ -93,7 +93,7 @@ jobs:
         ls /reports/
         echo "____________________________________________________"
         echo "ls /reports/terrascan-results/"
-        ls /reports/terrascan-results/
+        ls /reports/terrascan-report/faraday_terrascan.xml
 
 ###    Faraday CLI approach
     - name: Upload Reports to Faraday
