@@ -15,7 +15,7 @@ jobs:
         chmod +x ./tfsec 
         mv ./tfsec /usr/local/bin/tfsec
     - name: Run TFSec
-      run: tfsec . --format junit --out tfsec-junit.xml || true
+      run: tfsec . --format junit --out faraday_tfsec.xml || true
     - name: CheckOutput
       run: |
         ls ./
@@ -29,7 +29,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: tfsec-report
-        path: tfsec-junit.xml
+        path: faraday_tfsec.xml
 
 
   scan2:
@@ -45,7 +45,7 @@ jobs:
 
        
     - name: Run TerraScan
-      run: terrascan scan -t aws -d . --output xml -i terraform > ./terrascan_results.xml || true
+      run: terrascan scan -t aws -d . --output xml -i terraform > ./faraday_terrascan.xml || true
     - name: CheckOutput
       run: |
         ls ./
@@ -56,7 +56,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: terrascan-results
-        path: terrascan_results.xml
+        path: faraday_terrascan.xml
 
 ### Upload phase:
   upload:
@@ -100,8 +100,8 @@ jobs:
       run: |
         pip install faraday-cli
         faraday-cli auth -f ${{ secrets.FARADAY_HOST }} -u ${{ secrets.FARADAY_USERNAME }} -p ${{ secrets.FARADAY_PASSWORD }}
-        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} tfsec-junit.xml/tfsec-junit.xml
-        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} /reports/terrascan-results/terrascan_results.xml
-        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} /reports/terrascan-results/terrascan-results
+        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} tfsec-junit.xml/faraday_tfsec.xml
+        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} /reports/terrascan-results/faraday_terrascan.xml
+
 
 
