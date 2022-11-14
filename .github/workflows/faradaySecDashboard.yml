@@ -42,7 +42,7 @@ jobs:
         pip install terrascan
     - name: Run TerraScan
       run: terrascan scan -i terraform -t aws -d .
-       --output xml > terrascan-results.xml || true
+       --output xml > terrascan-results.xml
     - name: CheckOutput
       run: |
         ls ./
@@ -91,7 +91,7 @@ jobs:
         cat tfsec-junit.xml/tfsec-junit.xml
 
         echo "_____________________________"
-        cat terrascan-results.xml/terrascan-results.xml
+        ls terrascan-results.xml
 
 ###    Faraday CLI approach
     - name: Upload Reports to Faraday
