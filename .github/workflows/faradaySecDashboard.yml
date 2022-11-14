@@ -53,11 +53,11 @@ jobs:
 
     - name: CheckOutput
       run: |
-        ls ./
+        ls ./tfsec-junit.xml
         pwd
         ls -l
         echo "____________________________________"
-        cat tfsec-junit.xml
+        cat tfsec-junit.xml/tfsec-junit.xml
 
 ###    Faraday CLI approach
     - name: Upload Reports to Faraday
