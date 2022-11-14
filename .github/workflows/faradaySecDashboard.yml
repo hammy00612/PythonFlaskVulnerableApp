@@ -41,8 +41,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install terrascan
     - name: Run TerraScan
-      run: terrascan scan -i terraform -t aws -d .
-       --output xml > terrascan-results.xml
+      run: terrascan scan  -d . --output xml > ./terrascan-results.xml
     - name: CheckOutput
       run: |
         ls ./
