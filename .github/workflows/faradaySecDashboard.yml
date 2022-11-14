@@ -5,7 +5,7 @@ on:
       - master
 
 jobs:
-  scan:
+  scan1:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -31,10 +31,33 @@ jobs:
         name: tfsec-report
         path: tfsec-junit.xml
 
+
+  scan2:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install TerraScan
+      run: |
+        python -m pip install --upgrade pip
+        pip install terrascan
+    - name: Run TerraScan
+      run: terrascan scan -i terraform -t aws -d . --output xml > terrascan-results.xml || true
+    - name: CheckOutput
+      run: |
+        ls ./
+        pwd
+        ls -l
+
+    - name: Upload TerraScan Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: terrascan-results
+        path: terrascan-results.xml
+
 ### Upload phase:
   upload:
     if: ${{ always() }}
-    needs: [scan]
+    needs: [scan1,scan2]
     runs-on: ubuntu-latest
     container:
       image: python:3.9.1
@@ -51,6 +74,13 @@ jobs:
         name: tfsec-report
         path: tfsec-junit.xml
 
+    - name: Download TerraScan Report Artifact
+      uses: actions/download-artifact@master
+      with:
+        name: terrascan-results
+        path: terrascan-results.xml
+
+
     - name: CheckOutput
       run: |
         ls ./tfsec-junit.xml
@@ -59,13 +89,17 @@ jobs:
         echo "____________________________________"
         cat tfsec-junit.xml/tfsec-junit.xml
 
+        echo "_____________________________"
+        cat terrascan-results.xml
+        cat terrascan-results.xml/terrascan-results.xml
+
 ###    Faraday CLI approach
     - name: Upload Reports to Faraday
       run: |
         pip install faraday-cli
         faraday-cli auth -f ${{ secrets.FARADAY_HOST }} -u ${{ secrets.FARADAY_USERNAME }} -p ${{ secrets.FARADAY_PASSWORD }}
         faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} tfsec-junit.xml/tfsec-junit.xml
-
+        faraday-cli tool report -w ${{ secrets.FARADAY_WORKSPACE }} terrascan-results.xml
 
 
 
